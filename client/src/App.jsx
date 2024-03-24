@@ -26,7 +26,7 @@ function App() {
           <Route path="/:username"  element={ user ? <Userpage/> : <Navigate to='/auth' /> }  />
           <Route path="/:username/post/:postId" element={ user  ? <Postpage/> :  <Navigate to='/auth' />} />
         </Routes>
-        <CreatePost/>
+        { user ?  <CreatePost/> : null }
       </Container>
     </>
   )
